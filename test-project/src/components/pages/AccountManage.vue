@@ -114,9 +114,6 @@
   import canEditTable from './components/canEditTable.vue';
   import groupChangeAppId from'./components/groupChangeAppId.js';
   import errorMessage from './components/errorMessage.js'
-  import {
-    obCopy
-  } from '../../../static/js/utils';
 
   export default {
     name: 'editable-table',

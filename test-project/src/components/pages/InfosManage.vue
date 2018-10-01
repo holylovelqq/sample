@@ -45,10 +45,7 @@
   import bus from '../common/bus'
   import canEditTable from './components/canEditTable.vue';
   import errorMessage from './components/errorMessage.js'
-  import {
-    formatDate
-  } from '../../../static/js/utils';
-
+  
   export default {
     name: 'editable-table',
     components: {

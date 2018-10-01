@@ -18,8 +18,6 @@
 </template>
 
 <script>
-import { formatDate } from "../../../static/js/utils";
-
 export default {
   data() {
     return {
