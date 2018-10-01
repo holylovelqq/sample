@@ -130,13 +130,15 @@
             console.log('1');
             let userid=this.formInline.user;
             let pwd=this.formInline.password;
-            if(userid=='admin'&&pwd==123456||userid=='user'&&pwd==123456){
+            if(userid==''&&pwd==''){
+              this.$Message.error('sign in failed');
+            }else{
               this.$store.commit('storeUserId',userid);
               this.$router.push('/infos');
-              this.$Message.success('login successed');
-            }else{
-              this.$Message.error('login failed');
+              this.$Message.success('sign in successed');
             }
+          }else{
+            this.$Message.error('sign in failed');
           }
         })
         this.formInline.user='';
