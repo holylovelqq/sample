@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     init() {
-      console.log(this.$route.params.id);
+      // console.log(this.$route.params.id);
       let tempid=this.$route.params.id;
       this.tabledata=[{
         id: tempid,

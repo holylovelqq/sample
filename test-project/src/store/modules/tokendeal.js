@@ -1,4 +1,4 @@
-// 处理token
+// 处理token&&userId
 const login = {
     state:{
         userId:null,

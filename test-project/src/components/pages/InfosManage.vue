@@ -42,6 +42,7 @@
 </template>
 
 <script>
+  import bus from '../common/bus'
   import canEditTable from './components/canEditTable.vue';
   import errorMessage from './components/errorMessage.js'
   import {
@@ -104,7 +105,7 @@
     methods: {
       // 点击id跳转到详情页面( click to detailPage )
       handleView(val){
-        this.$router.push({ name: 'detailinfo', params: { id: val.id }})
+        this.$router.push({ name: 'detailinfo', params: { id: val.id }});
       },
       // 添加职场( add )
       ok(name) {
@@ -118,6 +119,7 @@
               }
             }
             this.$Message.info('add successed');
+            this.newGroup={groupname: '',groupcode: '',groupdesc: '' };
             //发送post请求，成功后
             // this.$axios.post('users/'+this.userId+'/groups',{
             //   "code":this.newGroup.groupcode,
@@ -229,8 +231,11 @@
           this.tabledata = this.initdata;
         } else {
           this.tabledata = this.initdata.slice((this.currentIndex-1)*this.pageSize, this.currentIndex*this.pageSize);
-        }
-      
+        };
+
+        // this.$axios.get('incidents').then((res)=>{
+        //   console.log(res);
+        // })
       //   this.$axios.get('users/'+this.userId+'/groups').then((res)=> {
       //     console.log(res);
       //     if(res.data.rtcode==200){

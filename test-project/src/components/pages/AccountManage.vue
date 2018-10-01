@@ -343,10 +343,10 @@
         //  删除成功，关闭modal重新初始化表格显示
         this.modal_loading = false;
         this.appDel = false;
-        this.rowInfo = '';
         this.$Message.success('delete success');
         this.initTableData();
         this.appIdList=[];
+        this.rowInfo = '';
         // groupChangeAppId(this.appIdList,this.searchGroup.code);
         // this.$axios.delete('/groups/'+this.searchGroup.code+'/apps/'+this.rowInfo.appId).then((res)=>{  
         //   // console.log(res);

@@ -6,7 +6,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-// import axios from 'axios'; 使ってない
+import axios from 'axios'; //使ってない
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';    // 默认主题　(theme)
 import "babel-polyfill";
@@ -20,8 +20,8 @@ Vue.prototype.$moment=Moment;
 Vue.use(iView);
 Vue.use(ElementUI, {size: 'small'});
 
-// Vue.prototype.$axios = axios;
-// axios.defaults.baseURL = '/api/v1.0/';
+Vue.prototype.$axios = axios;
+axios.defaults.baseURL = '/api/';
 
 
 // 页面刷新时，重新赋值token和userId（refreshするともう一度userIdの値を代入する）
